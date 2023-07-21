@@ -1,3 +1,3 @@
-module github.com/WatchJani/PostgresGo.git
+module github.com/WatchJani/PostgresGo
 
 go 1.20
