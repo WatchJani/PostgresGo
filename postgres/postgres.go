@@ -35,3 +35,11 @@ func Open(config Config) (*Store, error) {
 	store := NewStore(db)
 	return store, nil
 }
+
+func (store *Store) CheckStoreConnection() bool {
+	return store.db.Ping() != nil
+}
+
+func (store *Store) Close() error {
+	return store.db.Close()
+}

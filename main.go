@@ -28,5 +28,9 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println(store)
+	if store.CheckStoreConnection() {
+		fmt.Println("Connection is close")
+	}
+
+	store.Close()
 }
