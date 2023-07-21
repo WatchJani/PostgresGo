@@ -22,5 +22,11 @@ func main() {
 		Name:     os.Getenv("DB_NAME"),
 	}
 
-	fmt.Println(config)
+	store, err := postgres.Open(config)
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(store)
 }
